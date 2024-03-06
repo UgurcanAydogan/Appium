@@ -29,7 +29,7 @@ public class HesapMakinesi {
     public void deneme01() throws MalformedURLException {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"Pixel");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"Pixel 2");
         // capabilities.setCapability("deviceName","Pixel 2");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,"10.0");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
