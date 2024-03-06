@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 public class Driver {
 
     private static AndroidDriver<AndroidElement> appiumDriver;
-    // private static  IOSDriver<IOSElement> iosDriver;
+    private static  IOSDriver<IOSElement> iosDriver;
 
     static final String TELEFONADI="PIXEL 2";
     static final String ANDROIDVERSION="10.0";
@@ -43,9 +43,8 @@ public class Driver {
             caps.setCapability("appActivity","com.kiwi.android.feature.splash.impl.ui.SplashActivity");
             caps.setCapability(MobileCapabilityType.NO_RESET,false);
             /* eger bu capability FALSE olarak kullanilirsa,uygulama test edildikten sonra her seferinde kullanici datalari temizlenir ve
-               uygulamanin ilk install haline dondurulur
+            uygulamanin ilk install haline dondurulur
              */
-
             // eger true olursa kullanicili bilgileri test bittikten sonra sifirlan ve tercihler kaydedilir.Islemlere kaldiginiz yerden devam edilir
 
 
@@ -55,13 +54,12 @@ public class Driver {
                 appiumDriver = new AndroidDriver<AndroidElement>(appiumServerURL,caps);
                 appiumDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
             }else {
-                /*
+
                 assert appiumServerURL != null;
-               iosDriver = new IOSDriver<IOSElement>(appiumServerURL,caps);
+                iosDriver = new IOSDriver<IOSElement>(appiumServerURL,caps);
                 iosDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
-               */
-                throw new UnsupportedOperationException("Invalid Platform Name ");
+                throw new UnsupportedOperationException("Dostum Ios kullanmaya calisiyorsun YAPMA!!");
 
             }
 

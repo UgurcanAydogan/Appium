@@ -41,13 +41,15 @@ public class ArabamApp {
         // driver.activateApp("com.dogan.arabam");
         // uygulamanin basarili bir sekilde yuklendigi dogrulanir
         Assert.assertTrue(driver.isAppInstalled("com.dogan.arabam"));
+
         // uygulaminin basarili bir sekilde acildigi dogrulanir
         Assert.assertTrue(driver.findElementById("com.dogan.arabam:id/ivArabamLogo").isDisplayed());
+
         // alt menuden ilan ara butonuna tiklanir
         driver.findElementByXPath("//*[@text='İlan Ara']").click();
+
         // kategori olarak otomobil secilir
         //  driver.findElementByXPath("//*[@text='Otomobil']").click(); // tiklama yapmak icin kullanilan klasik yontem
-
         Thread.sleep(1000);
         TouchAction action=new TouchAction<>(driver); // Hangi cihaz uzerinde calisacaksak o cihaza ait driver
         action.
@@ -67,13 +69,17 @@ public class ArabamApp {
                     .perform(); // Bu islemler perform sayesinde yerine getirilir.
             Thread.sleep(500);
         }
+
         // arac olarak Volkswagen secilir
         driver.findElementByXPath("//*[@text='Volkswagen']").click();
+
         // arac markasi olarak passat secilir
         driver.findElementByXPath("//*[@text='Passat']").click();
+
         // 1.4 TSI BlueMotion secilir
         driver.findElementByXPath("//*[@text='1.4 TSi BlueMotion']").click();
         Thread.sleep(1000);
+
         // Paket secimi yapilir
         // 500 700
         action
@@ -81,6 +87,7 @@ public class ArabamApp {
                 .release()
                 .perform();
         Thread.sleep(1000);
+
         // Ucuzdan pahaliya siralama yaparak filtreleme yapilir
         driver.findElementById("com.dogan.arabam:id/textViewSorting").click();
         Thread.sleep(1000);
