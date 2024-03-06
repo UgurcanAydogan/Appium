@@ -24,7 +24,7 @@ public class apkYukleme {
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
         // UiAutomator 2 otomasyon ismi sadece android 6 dan yuksek olan android sistemleri icin calisir
         // UiAutomator otomasyon ismi sadece android 6 ve 6 dan dusuk olan android sistemleri icin calisir
-        capabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\ugurc\\IdeaProjects\\Appium\\Apps\\Kiwi.com - Book Cheap Flights_2023.14.0_Apkpure (1).apk");
+        capabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\ugurc\\IdeaProjects\\Appium\\Apps\\all-currency-converter-3-9-0 (1).apk");
 
 
         driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
